@@ -68,7 +68,8 @@ video {
   position: relative;
   inline-size: 711px;
   margin: 0 0 16px;
-  height: 392px;
+  display: grid;
+  gap: 16px;
 }
 
 .search-form {
@@ -103,12 +104,16 @@ video {
   cursor: pointer;
 }
 
-.search-form__label-text:hover {
-text-decoration: underline;
+.search-form__label-text {
+  font-family: 'Fira Sans Condensed';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: left;  
 }
 
-.search-form__label:hover{
-  outline: 1px solid #fff;
+.search-form__label-text:hover {
+text-decoration: underline;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -189,11 +194,6 @@ text-decoration: underline;
   background-color: #545050;
 }
 
-.more-button:focus-visible {
-border: 1px solid #fff;
-
-}
-
 .button:hover {
   text-decoration: underline 1px #fff;
 }
@@ -234,8 +234,6 @@ border: 1px solid #fff;
   overflow-y: scroll;
   block-size: 298px;
 }
-
-
 
 .content__list-item:not(:last-child) {
   margin: 0 0 34px;
@@ -281,7 +279,7 @@ border: 1px solid #fff;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 100%;
+  max-width: 200px;
   line-height: 1;
   text-transform: uppercase;
   hyphens: auto;
