@@ -67,11 +67,8 @@ video {
 .result__video-container {
   position: relative;
   inline-size: 711px;
-  margin: 0 0 11px;
-  width: 711px;
+  margin: 0 0 16px;
   height: 392px;
-  object-fit: cover;
-  object-position: 50% 50%;
 }
 
 .search-form {
@@ -106,9 +103,12 @@ video {
   cursor: pointer;
 }
 
-.search-form__label:hover {
-  text-decoration: underline 1px #fff;
-  text-underline-offset: 5px;
+.search-form__label-text:hover {
+text-decoration: underline;
+}
+
+.search-form__label:hover{
+  outline: 1px solid #fff;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -121,6 +121,7 @@ video {
   border-right: none;
   border-bottom: 1px solid #fff;
   border-left: none;
+  appearance: none;
   padding: 2px 0;
   color: currentColor;
   font-family: inherit;
@@ -184,7 +185,13 @@ video {
 }
 
 .button:active {
+  text-decoration: none;
   background-color: #545050;
+}
+
+.more-button:focus-visible {
+border: 1px solid #fff;
+
 }
 
 .button:hover {
@@ -226,12 +233,9 @@ video {
   position: relative;
   overflow-y: scroll;
   block-size: 298px;
-  scrollbar-width: none;
 }
 
-.content__list::-webkit-scrollbar {
-  display: none;
-}
+
 
 .content__list-item:not(:last-child) {
   margin: 0 0 34px;
@@ -274,6 +278,10 @@ video {
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
   line-height: 1;
   text-transform: uppercase;
   hyphens: auto;
